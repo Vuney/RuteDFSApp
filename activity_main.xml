@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#CCFFFFFF">
+
+        <Spinner
+            android:id="@+id/spinnerStart"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerEnd"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerAlgorithm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" />
+
+        <Button
+            android:id="@+id/btnFindRoute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cari" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtRouteInfo"
+        android:layout_below="@id/topPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rute akan muncul di sini"
+        android:padding="8dp"
+        android:background="#DDFFFFFF"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/btnResetMap"
+        android:layout_below="@id/txtRouteInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Map"
+        android:layout_margin="8dp"
+        android:backgroundTint="#FF4444"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnSwitchMode"
+        android:layout_below="@id/btnResetMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mode: Angkot"
+        android:layout_margin="8dp"
+        android:backgroundTint="#448AFF"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/btnNavigate"
+        android:layout_below="@id/btnSwitchMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Navigasi ke Google Maps"
+        android:layout_margin="8dp"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_below="@id/btnNavigate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>
